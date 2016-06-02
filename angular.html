@@ -1,0 +1,29 @@
+<html  ng-app>
+	<head>
+		<link type = "text/css" rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+		<script>
+			function MyController($scope){
+				$scope.emails = [
+							{ from: 'Gosree', sub: 'Mail Subject', date: 'Jan 1' },
+							{ from: 'Abhishek', sub: 'Yahoo Mail', date: 'Feb 2' },
+							{ from: 'Vishak', sub: 'Test Mail', date: 'Jan 15' }
+							];
+			}
+		</script>
+	</head>
+	<body ng-controller = "MyController">
+	<video src = "C:\Users\IBM_ADMIN\Desktop\video.mp4" width = "480" height = "320"  align = "right" controls></video>
+		<div class="container" style="padding-top:30px;">
+			<table class= "table table-bordered table-striped table-hover table-condensed" >
+				<tr ng-repeat = "email in emails"> 
+					<td>{{email.from}}</td>
+					<td>{{email.sub}}</td>
+					<td>{{email.date}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
